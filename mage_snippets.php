@@ -28,6 +28,23 @@ $storeLocaleCode = Mage::app()->getStore()->getLocaleCode();
  
 // Gets the current store's home url
 $storeHomeUrl = Mage::app()->getStore()->getHomeUrl();
-
-
 ?>
+
+<?php
+echo "Website ID: " . Mage::app()->getWebsite()->getId() . "<br/>"; 
+echo "Website Name: " . Mage::app()->getWebsite()->getName() . "<br/>"; 
+echo "Store ID: " . Mage::app()->getStore()->getId() . "<br/>"; 
+echo "Store Name: ".Mage::app()->getStore()->getName(). "<br/>";
+echo "Store code: ". Mage::app()->getStore()->getCode()."<br/>";
+
+foreach (Mage::app()->getWebsites() as $website) {
+    foreach ($website->getGroups() as $group) {
+        $stores = $group->getStores();
+        foreach ($stores as $store) {
+            echo $store->getId() ." ".$store->getName()."<br/>";
+        }
+    }
+}
+?>
+
+

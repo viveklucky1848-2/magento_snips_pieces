@@ -43,3 +43,9 @@ $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
 $productMetadata = $objectManager->get('Magento\Framework\App\ProductMetadataInterface');
 $version = $productMetadata->getVersion(); //will return the magento version
 ```
+#### ---OR---
+```php
+<?php
+$productMetadata = new \Magento\Framework\App\ProductMetadata();
+$version = $productMetadata->getVersion();
+```

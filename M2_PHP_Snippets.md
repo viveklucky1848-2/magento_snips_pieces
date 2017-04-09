@@ -1,4 +1,4 @@
-### Get Current store Id
+### Get Current Store Id
 ```php
 <?php
 //inject \Magento\Store\Model\StoreManagerInterface $storeManage
@@ -23,4 +23,14 @@ $joinConditions[] = "e.type_id= 'simple' ";
 $joinConditions = implode(
 	' AND ', $joinConditions
 );
+```
+
+### Get Product Collection without new Block creation
+```php
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+/** @var \Magento\Catalog\Model\ResourceModel\Product\Collection $productCollection */
+$productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\Collection');
+/** Apply filters here */
+$productCollection->load();
 ```

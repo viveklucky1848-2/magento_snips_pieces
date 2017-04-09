@@ -49,3 +49,13 @@ $version = $productMetadata->getVersion(); //will return the magento version
 $productMetadata = new \Magento\Framework\App\ProductMetadata();
 $version = $productMetadata->getVersion();
 ```
+
+### Print to Log from anywhere
+```php
+<?php
+$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+$logger = new \Zend\Log\Logger();
+$logger->addWriter($writer);
+$logger->info('Your text message');
+$logger->info(print_r($yourArray, true));
+```

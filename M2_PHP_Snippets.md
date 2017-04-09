@@ -62,6 +62,7 @@ $logger->info(print_r($yourArray, true));
 #### ---OR---
 ##### Include PSR Logger and use it's function inside your class/function
 ```php
+<?php
 use Psr\Log\LoggerInterface;
 //USAGE
 $this->_objectManager->get('Psr\Log\LoggerInterface')->debug("your message goes here");

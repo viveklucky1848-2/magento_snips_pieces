@@ -59,3 +59,10 @@ $logger->addWriter($writer);
 $logger->info('Your text message');
 $logger->info(print_r($yourArray, true));
 ```
+#### ---OR---
+##### Include PSR Logger and use it's function inside your class/function
+```php
+use Psr\Log\LoggerInterface;
+//USAGE
+$this->_objectManager->get('Psr\Log\LoggerInterface')->addDebug("your message goes here");
+```

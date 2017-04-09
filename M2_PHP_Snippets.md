@@ -1,4 +1,4 @@
-#### Get Current store Id
+### Get Current store Id
 ```php
 <?php
 //inject \Magento\Store\Model\StoreManagerInterface $storeManage
@@ -8,7 +8,7 @@ $id = $this->storeManager->getStore()->getId();
 $baseUrl = $this->storeManager->getStore()->getBaseUrl();
 ```
 
-#### Collection joined with table
+### Collection joined with table
 ```php
 <?php
 $joinConditions = 'u.field1 = e.field1';

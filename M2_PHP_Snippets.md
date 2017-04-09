@@ -64,5 +64,5 @@ $logger->info(print_r($yourArray, true));
 ```php
 use Psr\Log\LoggerInterface;
 //USAGE
-$this->_objectManager->get('Psr\Log\LoggerInterface')->addDebug("your message goes here");
+$this->_objectManager->get('Psr\Log\LoggerInterface')->debug("your message goes here");
 ```

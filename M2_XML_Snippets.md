@@ -1,4 +1,4 @@
-## Custom Log File
+### Inject Logger Class as dependency in di.xml file
 ```xml
 <preference for="Psr\Log\LoggerInterface" type="Magento\Framework\Logger\Monolog" />
 <type name="Magento\Framework\Logger\Monolog">

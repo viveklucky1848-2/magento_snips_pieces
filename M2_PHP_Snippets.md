@@ -34,3 +34,12 @@ $productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel
 /** Apply filters here */
 $productCollection->load();
 ```
+
+### Get Current Magento Version
+```php
+<?php
+//Updated to use object manager
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$productMetadata = $objectManager->get('Magento\Framework\App\ProductMetadataInterface');
+$version = $productMetadata->getVersion(); //will return the magento version
+```

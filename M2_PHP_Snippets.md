@@ -1,5 +1,9 @@
-## Custom Log File
+## Get Current store Id
 ```php
 <?php
-echo "Hello World!!!";
+//inject \Magento\Store\Model\StoreManagerInterface $storeManage
+$this->storeManager = $storeManager;
+$id = $this->storeManager->getStore()->getId();
+//Get BaseURL:
+$baseUrl = $this->storeManager->getStore()->getBaseUrl();
 ```

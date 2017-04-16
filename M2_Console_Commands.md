@@ -39,7 +39,7 @@ php bin/magento indexer:reindex
 php bin/magento setup:di:compile
 ```
 
-### Run the single-tenant DI(Dependency Injection) Compiler
+### Run the multi-tenant DI(Dependency Injection) Compiler
 ```cmd
 php bin/magento setup:di:compile-multi-tenant
 ```
